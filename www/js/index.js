@@ -19,7 +19,7 @@ function random()
     alert(rand);
     navigator.notification.beep(2);
   }
-navigator.vibrate([200000]);
+navigator.vibrate([2000]);
 }
 
 function submitText()
