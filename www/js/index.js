@@ -35,8 +35,8 @@ function random()
           navigator.vibrate([2000]);
           break;
       default:
-          code block
-          break;
+          navigator.vibrate([2000]);
+
   }
     alert(rand);
 
