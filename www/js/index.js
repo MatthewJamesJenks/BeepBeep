@@ -7,19 +7,41 @@ $(document).on("pagecreate","#pageone",function(){
 function random()
 {
 
-  var rand = !Math.round(Math.random());
+  var rand = Math.round(Math.random() * 6);
 
-  if(rand == true)
-  {
-    alert(rand);
-    navigator.notification.beep(1);
+  switch(rand) {
+      case 1:
+          alert("possitive")
+          navigator.notification.beep(1);
+          break;
+      case 2:
+          alert("possitive")
+          navigator.notification.beep(1);
+          break;
+      case 3:
+          alert("possitive")
+          navigator.notification.beep(1);
+          break;
+      case 4:
+      alert("Negative");
+      navigator.vibrate([2000]);
+          break;
+      case 5:
+          alert("Negative");
+          navigator.vibrate([2000]);
+          break;
+      case 6:
+          alert("Negative");
+          navigator.vibrate([2000]);
+          break;
+      default:
+          code block
+          break;
   }
-  else if (rand == false)
-  {
     alert(rand);
-    navigator.notification.beep(2);
-  }
-navigator.vibrate([2000]);
+
+
+
 }
 
 function submitText()
