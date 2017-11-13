@@ -1,10 +1,10 @@
 $(document).on("pagecreate","#pageone",function(){
   $('#submitButton').on("click", function(){
-    randomer();
+    random();
   });
 });
 
-function randomer()
+function random()
 {
 
   var rand = !Math.round(Math.random());
