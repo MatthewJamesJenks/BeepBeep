@@ -8,8 +8,17 @@ function random()
 {
 
   var rand = !Math.round(Math.random());
-  alert(rand);
-  navigator.notification.beep(1);
+
+  if(rand == true)
+  {
+    alert(rand);
+    navigator.notification.beep(1);
+  }
+  else if (rand == false)
+  {
+    alert(rand);
+    navigator.notification.beep(2);
+  }
 
 }
 
