@@ -9,13 +9,14 @@ enableHighAccuracy: true
 var watchID = navigator.geolocation.watchPosition(
 success, fail, locationOptions);
 
-$(document).on("pagecreate","#pageone",function(){
+$(document).on("click","#pageone",function(){
   $('#submitButton').on("click", function(){
     random();
   });
   $('#toggle').on("click", function(){
     toggleStatus();
   });
+
 });
 
 
@@ -38,6 +39,16 @@ console.log(st + " _1");
 console.log(st + " _2");
 }
 
+function getPosition() {
+
+	//change time box to show updated message
+	$('#time').val("Getting data...");
+	$('#lattext').val("Getting data...");
+
+	//instruct location service to get position with appropriate callbacks
+	navigator.geolocation.getCurrentPosition(successPosition, failPosition);
+}
+
 function success(position)
 {
 //do something with the position
@@ -50,15 +61,12 @@ function success(position)
 	//OK. Now we want to update the display with the correct values
     $('#time').val("Recieved data at " + time);
     $('#lattext').val("Recieved data at " + latitude);
-
-
-
-
 }
 
 function fail(error)
 {
 //do something with the error
+	$('#time').val("Error getting data: " + error);
 }
 
 function random()
